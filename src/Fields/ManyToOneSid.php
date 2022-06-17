@@ -1,6 +1,6 @@
 <?php
 /**
- * Define an id foreign field.
+ * Define an sid foreign field.
  *
  * @author Samy Nastuzzi <samy@nastuzzi.fr>
  *
@@ -10,6 +10,6 @@
 
 namespace Laramore\Fields;
 
-class OneToOneId extends OneToOne
+class ManyToOneSid extends ManyToOne
 {
 }

@@ -1,6 +1,6 @@
 <?php
 /**
- * Add the field id as a Type.
+ * Add the field sid as a Type.
  *
  * @author Samy Nastuzzi <samy@nastuzzi.fr>
  *
@@ -13,14 +13,14 @@ namespace Laramore\Providers;
 use Illuminate\Support\ServiceProvider;
 use Laramore\Traits\Provider\MergesConfig;
 
-class IdProvider extends ServiceProvider
+class SidProvider extends ServiceProvider
 {
     use MergesConfig;
 
     /**
      * Prepare all configs and default options, types and fields.
      *
-     * @return void
+     * @return vosid
      */
     public function register()
     {
@@ -33,7 +33,7 @@ class IdProvider extends ServiceProvider
         );
 
         $this->mergeConfigFrom(
-            __DIR__."/../../config/field/validations.php", "field.validations",
+            __DIR__."/../../config/field/valsidations.php", "field.valsidations",
         );
 
         $this->mergeConfigFrom(

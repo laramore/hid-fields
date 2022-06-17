@@ -1,6 +1,6 @@
 {
-    "name": "laramore/id-fields",
-    "description": "Add id fields for Laramore",
+    "name": "laramore/sid-fields",
+    "description": "Add sid fields for Laramore",
     "type": "library",
     "license": "MIT",
     "config": {
@@ -40,7 +40,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Laramore\\Providers\\IdProvider"
+                "Laramore\\Providers\\SidProvider"
             ]
         }
     },

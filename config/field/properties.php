@@ -6,38 +6,38 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Default id fields
+    | Default sid fields
     |--------------------------------------------------------------------------
     |
-    | This option defines the default id fields.
+    | This option defines the default sid fields.
     |
     */
 
-    Id::class => [
+    Sid::class => [
         'options' => [
             'select', 'visible', 'fillable', 'required',
         ],
     ],
-    PrimaryId::class => [
+    PrimarySid::class => [
         'options' => [
             'select', 'visible',
         ],
     ],
-    ManyToOneId::class => [
+    ManyToOneSid::class => [
         'options' => [
             'visible', 'fillable', 'required',
         ],
         'fields' => [
-            'id' => Id::class,
+            'sid' => Sid::class,
             'reversed' => Reversed\HasMany::class,
         ],
         'templates' => [
-            'id' => '${name}_${identifier}',
+            'sid' => '${name}_${sidentifier}',
             'reversed' => '+{modelname}',
             'self_reversed' => 'reversed_+{name}',
         ],
     ],
-    ManyToManyId::class => [
+    ManyToManySid::class => [
         'options' => [
             'visible', 'fillable',
         ],
@@ -45,7 +45,7 @@ return [
         'fields' => [
             'reversed' => Reversed\BelongsToMany::class,
         ],
-        'pivot_field' => ManyToOneId::class,
+        'pivot_field' => ManyToOneSid::class,
         'templates' => [
             'reversed' => '+{modelname}',
             'pivot' => 'pivot',
@@ -54,16 +54,16 @@ return [
             'self_reversed_pivot' => 'reversed_+{modelname}',
         ],
     ],
-    OneToOneId::class => [
+    OneToOneSid::class => [
         'options' => [
             'visible', 'fillable', 'required',
         ],
         'fields' => [
-            'id' => UniqueId::class,
+            'sid' => UniqueSid::class,
             'reversed' => Reversed\HasOne::class,
         ],
         'templates' => [
-            'id' => '${name}_${identifier}',
+            'sid' => '${name}_${sidentifier}',
             'reversed' => '${modelname}',
             'self_reversed' => 'reversed_+{name}',
         ],

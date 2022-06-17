@@ -6,29 +6,29 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Default id fields
+    | Default sid fields
     |--------------------------------------------------------------------------
     |
-    | This option defines the default id fields.
+    | This option defines the default sid fields.
     |
     */
 
-    Id::class => [
+    Sid::class => [
 
     ],
-    PrimaryId::class => [
+    PrimarySid::class => [
 
     ],
-    ManyToOneId::class => [
+    ManyToOneSid::class => [
         'formater' => 'relation',
     ],
-    ManyToManyId::class => [
+    ManyToManySid::class => [
         'formater' => 'randomRelation',
         'parameters' => [
             'limit' => 2,
         ],
     ],
-    OneToOneId::class => [
+    OneToOneSid::class => [
         'formater' => 'relation',
     ],
     

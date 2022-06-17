@@ -1,2 +1,2 @@
-# laramore-id-field
-Add an ID field for Laramore
+# laramore-sid-field
+Add sid field for Laramore

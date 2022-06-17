@@ -6,32 +6,32 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Default id fields
+    | Default sid fields
     |--------------------------------------------------------------------------
     |
-    | This option defines the default id fields.
+    | This option defines the default sid fields.
     |
     */
 
-    Id::class => [
+    Sid::class => [
         'type' => 'bigint',
         'property_keys' => [
             'nullable', 'default',
         ],
     ],
-    PrimaryId::class => [
+    PrimarySid::class => [
         'type' => 'bigint',
         'property_keys' => [
             'nullable', 'default',
         ],
     ],
-    ManyToOneId::class => [
+    ManyToOneSid::class => [
 
     ],
-    ManyToManyId::class => [
+    ManyToManySid::class => [
 
     ],
-    OneToOneId::class => [
+    OneToOneSid::class => [
 
     ],
 

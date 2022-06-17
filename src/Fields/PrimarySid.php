@@ -1,6 +1,6 @@
 <?php
 /**
- * Define an id field.
+ * Define an sid field.
  *
  * @author Samy Nastuzzi <samy@nastuzzi.fr>
  *
@@ -13,12 +13,12 @@ namespace Laramore\Fields;
 use Laramore\Contracts\Field\Constraint\PrimaryField;
 use Laramore\Fields\Constraint\PrimaryConstraintHandler;
 
-class PrimaryId extends Id implements PrimaryField
+class PrimarySid extends Sid implements PrimaryField
 {
     /**
      * Create a Constraint handler for this meta.
      *
-     * @return void
+     * @return vosid
      */
     protected function setConstraintHandler()
     {

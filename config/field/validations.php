@@ -6,27 +6,27 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Default id validations
+    | Default sid valsidations
     |--------------------------------------------------------------------------
     |
-    | This option defines the default id validations.
+    | This option defines the default sid valsidations.
     |
     */
 
-    Fields\Id::class => [
+    Fields\Sid::class => [
 
     ],
-    Fields\PrimaryId::class => [
+    Fields\PrimarySid::class => [
 
     ],
-    Fields\ManyToOneId::class => [
-        Validations\ArrayObject::class,
+    Fields\ManyToOneSid::class => [
+        Valsidations\ArrayObject::class,
     ],
-    Fields\ManyToManyId::class => [
-        Validations\ObjectList::class,
+    Fields\ManyToManySid::class => [
+        Valsidations\ObjectList::class,
     ],
-    Fields\OneToOneId::class => [
-        Validations\ArrayObject::class,
+    Fields\OneToOneSid::class => [
+        Valsidations\ArrayObject::class,
     ],
 
 ];

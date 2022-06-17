@@ -1,6 +1,6 @@
 <?php
 /**
- * Define an id field.
+ * Define an sid field.
  *
  * @author Samy Nastuzzi <samy@nastuzzi.fr>
  *
@@ -10,7 +10,7 @@
 
 namespace Laramore\Fields;
 
-class Id extends BaseAttribute
+class Sid extends BaseAttribute
 {
     /**
      * Dry the value in a simple format.
@@ -57,7 +57,7 @@ class Id extends BaseAttribute
     }
 
     /**
-     * Return a new generated id.
+     * Return a new generated sid.
      *
      * @return string
      */
