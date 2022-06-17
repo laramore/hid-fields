@@ -1,0 +1,63 @@
+{
+    "name": "laramore/id-fields",
+    "description": "Add id fields for Laramore",
+    "type": "library",
+    "license": "MIT",
+    "config": {
+        "platform": {
+            "php": "7.3"
+        }
+    },
+    "require": {
+        "php": "^7.3|^8.0",
+        "laramore/laramore": ">=0.29"
+    },
+    "authors": [
+        {
+            "name": "NastuzziSamy",
+            "email": "samy@nastuzzi.fr"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Laramore\\": "src/"
+        }
+    },
+    "require-dev": {
+        "phpmd/phpmd": ">=2.7",
+        "squizlabs/php_codesniffer": ">=3.5",
+        "phpstan/phpstan": ">=0.9.2",
+        "phpunit/phpunit": ">=6.5"
+    },
+    "suggest": {
+        "laramore/migrations": "Generate automatically all your migrations",
+        "laramore/factories": "Generate automatically all your factories"
+    },
+    "conflict": {
+        "laravel/framework": "< 5.6",
+        "laramore/migrations": "< 0.3.1"
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "Laramore\\Providers\\IdProvider"
+            ]
+        }
+    },
+    "scripts": {
+        "test:lint": [
+            "./vendor/bin/phpcs src",
+            "./vendor/bin/phpmd src text phpmd.xml"
+        ],
+        "fix:lint": [
+            "./vendor/bin/phpcbf src"
+        ],
+        "test:unit": [
+            "./vendor/bin/phpunit --bootstrap vendor/autoload.php tests"
+        ],
+        "test": [
+            "@composer test:lint",
+            "@composer test:unit"
+        ]
+    }
+}
