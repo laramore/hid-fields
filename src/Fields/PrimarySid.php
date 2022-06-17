@@ -18,7 +18,7 @@ class PrimarySid extends Sid implements PrimaryField
     /**
      * Create a Constraint handler for this meta.
      *
-     * @return vosid
+     * @return void
      */
     protected function setConstraintHandler()
     {

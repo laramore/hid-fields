@@ -20,7 +20,7 @@ class SidProvider extends ServiceProvider
     /**
      * Prepare all configs and default options, types and fields.
      *
-     * @return vosid
+     * @return void
      */
     public function register()
     {
@@ -33,7 +33,7 @@ class SidProvider extends ServiceProvider
         );
 
         $this->mergeConfigFrom(
-            __DIR__."/../../config/field/valsidations.php", "field.valsidations",
+            __DIR__."/../../config/field/validations.php", "field.validations",
         );
 
         $this->mergeConfigFrom(

@@ -20,13 +20,13 @@ return [
 
     ],
     Fields\ManyToOneSid::class => [
-        Valsidations\ArrayObject::class,
+        Validations\ArrayObject::class,
     ],
     Fields\ManyToManySid::class => [
-        Valsidations\ObjectList::class,
+        Validations\ObjectList::class,
     ],
     Fields\OneToOneSid::class => [
-        Valsidations\ArrayObject::class,
+        Validations\ArrayObject::class,
     ],
 
 ];

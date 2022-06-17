@@ -28,11 +28,11 @@ return [
             'visible', 'fillable', 'required',
         ],
         'fields' => [
-            'sid' => Sid::class,
+            'id' => Sid::class,
             'reversed' => Reversed\HasMany::class,
         ],
         'templates' => [
-            'sid' => '${name}_${sidentifier}',
+            'id' => '${name}_${identifier}',
             'reversed' => '+{modelname}',
             'self_reversed' => 'reversed_+{name}',
         ],
@@ -59,11 +59,11 @@ return [
             'visible', 'fillable', 'required',
         ],
         'fields' => [
-            'sid' => UniqueSid::class,
+            'id' => UniqueSid::class,
             'reversed' => Reversed\HasOne::class,
         ],
         'templates' => [
-            'sid' => '${name}_${sidentifier}',
+            'id' => '${name}_${identifier}',
             'reversed' => '${modelname}',
             'self_reversed' => 'reversed_+{name}',
         ],
