@@ -14,13 +14,13 @@ return [
     */
 
     Sid::class => [
-        'type' => 'bigint',
+        'type' => 'bigInteger',
         'property_keys' => [
             'nullable', 'default',
         ],
     ],
     PrimarySid::class => [
-        'type' => 'bigint',
+        'type' => 'bigInteger',
         'property_keys' => [
             'nullable', 'default',
         ],

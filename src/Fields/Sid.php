@@ -20,7 +20,16 @@ class Sid extends BaseAttribute
      */
     public function dry($value)
     {
-        return is_string($value) ? hexdec($value) : $value;
+        if (! is_string($value)) return $value;
+
+        $firstHex = hexdec($value[0]);
+        $negative = $firstHex > 7;
+
+        if ($negative) {
+            $value[0] = dechex($firstHex - 8);
+        }
+
+        return hexdec($value) * ($negative ? -1 : 1);
     }
 
     /**
@@ -31,7 +40,20 @@ class Sid extends BaseAttribute
      */
     public function hydrate($value)
     {
-        return is_numeric($value) ? dechex($value) : $value;
+        if (! is_numeric($value)) return $value;
+
+        $negative = $value < 0;
+        $value = dechex(abs($value));
+
+        while (strlen($value) < 16) {
+            $value = '0'.$value;
+        }
+
+        if ($negative) {
+            $value[0] = dechex(hexdec($value[0]) + 8);
+        }
+
+        return $value;
     }
 
     /**
@@ -42,7 +64,7 @@ class Sid extends BaseAttribute
      */
     public function cast($value)
     {
-        return $this->hydrate($value);
+        return $value;
     }
 
     /**
