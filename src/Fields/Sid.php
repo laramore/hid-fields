@@ -27,9 +27,11 @@ class Sid extends BaseAttribute
 
         if ($negative) {
             $value[0] = dechex($firstHex - 8);
+
+            return - hexdec($value) - 1;
         }
 
-        return hexdec($value) * ($negative ? -1 : 1);
+        return hexdec($value);
     }
 
     /**
@@ -43,7 +45,7 @@ class Sid extends BaseAttribute
         if (! is_numeric($value)) return $value;
 
         $negative = $value < 0;
-        $value = dechex(abs($value));
+        $value = dechex(abs($value + ($negative ? 1 : 0)));
 
         while (strlen($value) < 16) {
             $value = '0'.$value;
