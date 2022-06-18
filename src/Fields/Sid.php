@@ -64,7 +64,7 @@ class Sid extends BaseAttribute
      */
     public function cast($value)
     {
-        return $value;
+        return \strtolower($value);
     }
 
     /**
