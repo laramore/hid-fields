@@ -1,6 +1,6 @@
 <?php
 /**
- * Add the field sid as a Type.
+ * Add the field hid as a Type.
  *
  * @author Samy Nastuzzi <samy@nastuzzi.fr>
  *
@@ -13,7 +13,7 @@ namespace Laramore\Providers;
 use Illuminate\Support\ServiceProvider;
 use Laramore\Traits\Provider\MergesConfig;
 
-class SidProvider extends ServiceProvider
+class HidProvider extends ServiceProvider
 {
     use MergesConfig;
 

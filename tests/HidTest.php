@@ -3,9 +3,9 @@ declare(strict_types=1);
 
 use PHPUnit\Framework\TestCase;
 
-final class SidTest extends TestCase
+final class HidTest extends TestCase
 {
-    public function testSid()
+    public function testHid()
     {
     }
 }

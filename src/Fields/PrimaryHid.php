@@ -1,6 +1,6 @@
 <?php
 /**
- * Define an sid field.
+ * Define an hid field.
  *
  * @author Samy Nastuzzi <samy@nastuzzi.fr>
  *
@@ -13,7 +13,7 @@ namespace Laramore\Fields;
 use Laramore\Contracts\Field\Constraint\PrimaryField;
 use Laramore\Fields\Constraint\PrimaryConstraintHandler;
 
-class PrimarySid extends Sid implements PrimaryField
+class PrimaryHid extends Hid implements PrimaryField
 {
     /**
      * Create a Constraint handler for this meta.

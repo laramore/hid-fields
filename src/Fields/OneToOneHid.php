@@ -1,6 +1,6 @@
 <?php
 /**
- * Define an sid many to many field.
+ * Define an hid foreign field.
  *
  * @author Samy Nastuzzi <samy@nastuzzi.fr>
  *
@@ -10,6 +10,6 @@
 
 namespace Laramore\Fields;
 
-class ManyToManySid extends ManyToMany
+class OneToOneHid extends OneToOne
 {
 }

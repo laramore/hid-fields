@@ -6,29 +6,29 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Default sid fields
+    | Default hid fields
     |--------------------------------------------------------------------------
     |
-    | This option defines the default sid fields.
+    | This option defines the default hid fields.
     |
     */
 
-    Sid::class => [
+    Hid::class => [
         'options' => [
             'select', 'visible', 'fillable', 'required',
         ],
     ],
-    PrimarySid::class => [
+    PrimaryHid::class => [
         'options' => [
             'select', 'visible',
         ],
     ],
-    ManyToOneSid::class => [
+    ManyToOneHid::class => [
         'options' => [
             'visible', 'fillable', 'required',
         ],
         'fields' => [
-            'id' => Sid::class,
+            'id' => Hid::class,
             'reversed' => Reversed\HasMany::class,
         ],
         'templates' => [
@@ -37,7 +37,7 @@ return [
             'self_reversed' => 'reversed_+{name}',
         ],
     ],
-    ManyToManySid::class => [
+    ManyToManyHid::class => [
         'options' => [
             'visible', 'fillable',
         ],
@@ -45,7 +45,7 @@ return [
         'fields' => [
             'reversed' => Reversed\BelongsToMany::class,
         ],
-        'pivot_field' => ManyToOneSid::class,
+        'pivot_field' => ManyToOneHid::class,
         'templates' => [
             'reversed' => '+{modelname}',
             'pivot' => 'pivot',
@@ -54,12 +54,12 @@ return [
             'self_reversed_pivot' => 'reversed_+{modelname}',
         ],
     ],
-    OneToOneSid::class => [
+    OneToOneHid::class => [
         'options' => [
             'visible', 'fillable', 'required',
         ],
         'fields' => [
-            'id' => UniqueSid::class,
+            'id' => UniqueHid::class,
             'reversed' => Reversed\HasOne::class,
         ],
         'templates' => [

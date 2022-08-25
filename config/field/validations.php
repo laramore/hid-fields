@@ -6,26 +6,26 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Default sid valsidations
+    | Default hid validations
     |--------------------------------------------------------------------------
     |
-    | This option defines the default sid valsidations.
+    | This option defines the default hid validations.
     |
     */
 
-    Fields\Sid::class => [
+    Fields\Hid::class => [
 
     ],
-    Fields\PrimarySid::class => [
+    Fields\PrimaryHid::class => [
 
     ],
-    Fields\ManyToOneSid::class => [
+    Fields\ManyToOneHid::class => [
         Validations\ArrayObject::class,
     ],
-    Fields\ManyToManySid::class => [
+    Fields\ManyToManyHid::class => [
         Validations\ObjectList::class,
     ],
-    Fields\OneToOneSid::class => [
+    Fields\OneToOneHid::class => [
         Validations\ArrayObject::class,
     ],
 

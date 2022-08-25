@@ -1,6 +1,6 @@
 <?php
 /**
- * Define an sid field.
+ * Define an hid field.
  *
  * @author Samy Nastuzzi <samy@nastuzzi.fr>
  *
@@ -10,7 +10,7 @@
 
 namespace Laramore\Fields;
 
-class Sid extends BaseAttribute
+class Hid extends BaseAttribute
 {
     /**
      * Dry the value in a simple format.
@@ -43,6 +43,7 @@ class Sid extends BaseAttribute
     public function hydrate($value)
     {
         if (! is_numeric($value)) return $value;
+        if ($value === PHP_INT_MIN) return 'ffffffffffffffff';
 
         $negative = $value < 0;
         $value = dechex(abs($value + ($negative ? 1 : 0)));
@@ -81,7 +82,7 @@ class Sid extends BaseAttribute
     }
 
     /**
-     * Return a new generated sid.
+     * Return a new generated hid.
      *
      * @return string
      */

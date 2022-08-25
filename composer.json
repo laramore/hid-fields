@@ -1,6 +1,6 @@
 {
-    "name": "laramore/sid-fields",
-    "description": "Add sid fields for Laramore",
+    "name": "laramore/hid-fields",
+    "description": "Add hid fields for Laramore",
     "type": "library",
     "license": "MIT",
     "config": {
@@ -40,7 +40,7 @@
     "extra": {
         "laravel": {
             "providers": [
-                "Laramore\\Providers\\SidProvider"
+                "Laramore\\Providers\\HidProvider"
             ]
         }
     },

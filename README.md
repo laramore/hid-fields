@@ -1,2 +1,2 @@
-# laramore-sid-field
-Add sid field for Laramore
+# laramore-hid-field
+Add hid field for Laramore

@@ -6,30 +6,30 @@ return [
 
     /*
     |--------------------------------------------------------------------------
-    | Default sid fields
+    | Default hid fields
     |--------------------------------------------------------------------------
     |
-    | This option defines the default sid fields.
+    | This option defines the default hid fields.
     |
     */
 
-    Sid::class => [
+    Hid::class => [
 
     ],
-    PrimarySid::class => [
+    PrimaryHid::class => [
 
     ],
-    ManyToOneSid::class => [
+    ManyToOneHid::class => [
         'formater' => 'relation',
     ],
-    ManyToManySid::class => [
+    ManyToManyHid::class => [
         'formater' => 'randomRelation',
         'parameters' => [
             'limit' => 2,
         ],
     ],
-    OneToOneSid::class => [
+    OneToOneHid::class => [
         'formater' => 'relation',
     ],
-    
+
 ];

@@ -10,9 +10,9 @@
 
 namespace Laramore\Eloquent;
 
-use Laramore\Fields\ManyToOneSid;
+use Laramore\Fields\ManyToOneHid;
 
-class BaseSessionSid extends BaseSession
+class BaseSessionHid extends BaseSession
 {
-    protected static $userFieldClass = ManyToOneSid::class;
+    protected static $userFieldClass = ManyToOneHid::class;
 }
