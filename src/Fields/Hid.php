@@ -67,6 +67,8 @@ class Hid extends BaseAttribute
      */
     public function cast($value)
     {
+        if (!is_string($value)) return $value;
+
         return \strtolower($value);
     }
 
