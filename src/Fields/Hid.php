@@ -28,7 +28,7 @@ class Hid extends BaseAttribute
         if ($negative) {
             $value[0] = dechex($firstHex - 8);
 
-            return - hexdec($value) - 1;
+            return PHP_INT_MIN + hexdec($value);
         }
 
         return hexdec($value);
@@ -43,20 +43,14 @@ class Hid extends BaseAttribute
     public function hydrate($value)
     {
         if (! is_numeric($value)) return $value;
-        if ($value === PHP_INT_MIN) return 'ffffffffffffffff';
 
-        $negative = $value < 0;
-        $value = dechex(abs($value + ($negative ? 1 : 0)));
+        $hexValue = dechex($value);
 
-        while (strlen($value) < 16) {
-            $value = '0'.$value;
+        while (strlen($hexValue) < 16) {
+            $hexValue = '0'.$hexValue;
         }
 
-        if ($negative) {
-            $value[0] = dechex(hexdec($value[0]) + 8);
-        }
-
-        return $value;
+        return $hexValue;
     }
 
     /**
